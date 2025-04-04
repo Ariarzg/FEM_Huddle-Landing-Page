@@ -26,11 +26,11 @@ body {
   background-size: contain;
   padding: 2rem;
   text-align: center;
+  color: white;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 3rem;
-  color: rgba(255, 255, 255, 0.8);
+  justify-content: space-between;
+  gap: 2rem;
 }
 
 @media (min-width: calc(48rem + 1px)) {
@@ -38,13 +38,13 @@ body {
     text-align: start;
     padding: 2rem 4rem;
     background-image: url("images/bg-desktop.svg");
-    background-color: var(--clr-primary);
-    background-position: center;
+    background-position: top;
     background-size: cover;
   }
 }
 
-main {
+/* main {
+  background: black;
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
@@ -52,29 +52,73 @@ main {
 
 @media (min-width: calc(48rem + 1px)) {
   main {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 45%;
+    justify-content: center;
   }
+} */
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: calc(48rem + 1px)) {
+  main {
+    flex-direction: row;
+    justify-self: center;
+    max-width: 100%;
+  }
+}
+
+.mockup {
+  margin-block: auto;
+  min-width: 60%;
+  height: fit-content;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 2rem;
   align-items: center;
+  gap: 2rem;
   margin-block: 2rem;
+}
+
+@media (min-width: calc(48rem + 1px)) {
+  .container {
+    margin-block: 4rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 }
 
 h1 {
   font-family: var(--f-heading);
   font-weight: var(--fw-600);
   font-size: 1.5rem;
-  line-height: 1.5;
+  line-height: 1.6;
+  text-wrap: pretty;
+}
+
+@media (min-width: calc(48rem + 1px)) {
+  h1 {
+    font-size: clamp(1.125rem, 3vw, 3.5rem);
+  }
 }
 
 p {
+  color: rgba(255, 255, 255, 0.8);
   font-family: var(--f-body);
   font-weight: var(--fw-400);
+  line-height: 1.8;
+}
+
+@media (min-width: calc(48rem + 1px)) {
+  p {
+    font-size: clamp(0.875rem, 1.5vw, 1.125rem);
+  }
 }
 
 .logo {
@@ -83,7 +127,7 @@ p {
 
 @media (min-width: calc(48rem + 1px)) {
   .logo {
-    width: clamp(5rem, 12vw, 12rem);
+    width: clamp(7rem, 16vw, 12rem);
   }
 }
 
@@ -105,6 +149,12 @@ footer {
   gap: 1rem;
 }
 
+@media (min-width: calc(48rem + 1px)) {
+  footer {
+    justify-content: flex-end;
+  }
+}
+
 a {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.8);
@@ -117,4 +167,12 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (min-width: calc(48rem + 1px)) {
+  a {
+    font-size: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 }
