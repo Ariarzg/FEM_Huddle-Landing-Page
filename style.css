@@ -140,6 +140,14 @@ p {
   border: none;
   border-radius: 2rem;
   padding: 1rem 4rem;
+  box-shadow: 0.3rem 0.3rem 2rem rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background: var(--clr-secondary);
+    color: white;
+  }
 }
 
 footer {
@@ -167,6 +175,11 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &:hover {
+    border-color: var(--clr-secondary);
+    color: var(--clr-secondary);
+  }
 }
 
 @media (min-width: calc(48rem + 1px)) {
